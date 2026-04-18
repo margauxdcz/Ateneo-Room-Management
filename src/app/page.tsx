@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Features />
       <CampusMap />
       <Closing />

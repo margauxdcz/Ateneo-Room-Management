@@ -170,9 +170,9 @@ const buildings = [
       {
         id: "KH-101", name: "KH 101", capacity: 40, schedule: [
           { time: "7:30 AM", subject: "", status: "free" },
-          { time: "9:00 AM", subject: "THEO 141", status: "occupied" },
+          { time: "9:00 AM", subject: "THEO 11", status: "occupied" },
           { time: "10:30 AM", subject: "", status: "free" },
-          { time: "1:00 PM", subject: "THEO 151", status: "occupied" },
+          { time: "1:00 PM", subject: "THEO 13", status: "occupied" },
           { time: "2:30 PM", subject: "", status: "free" },
         ]
       },
@@ -211,11 +211,11 @@ const buildings = [
     rooms: [
       {
         id: "FH-201", name: "FH 201", capacity: 55, schedule: [
-          { time: "7:30 AM", subject: "PHILO 101", status: "occupied" },
+          { time: "11:00 AM", subject: "MSYS 51", status: "occupied" },
           { time: "9:00 AM", subject: "", status: "free" },
-          { time: "10:30 AM", subject: "THEO 141", status: "occupied" },
+          { time: "3:30 PM", subject: "MSYS 42", status: "occupied" },
           { time: "1:00 PM", subject: "", status: "free" },
-          { time: "2:30 PM", subject: "PHILO 301", status: "occupied" },
+          { time: "6:30 PM", subject: "MSYS 60", status: "occupied" },
         ]
       },
       {

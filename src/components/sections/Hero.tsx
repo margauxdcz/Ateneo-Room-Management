@@ -224,7 +224,7 @@ export default function Hero() {
                   fontFamily: "var(--font-jakarta)", fontSize: "12px",
                   color: "var(--muted)", fontWeight: 500, marginBottom: "4px",
                 }}>
-                  Leong Hall · Room LS 101
+                  PLDT-CTC 205
                 </p>
                 <p style={{
                   fontFamily: "var(--font-serif)", fontSize: "20px",
@@ -246,10 +246,10 @@ export default function Hero() {
 
             {/* Mini schedule */}
             {[
-              { time: "7:30 AM", label: "MIS 101", free: false },
-              { time: "9:00 AM", label: "Free slot", free: true },
-              { time: "10:30 AM", label: "MGT 201", free: false },
-              { time: "1:00 PM", label: "Free slot", free: true },
+              { time: "8:00 AM", label: "PHILO 13", free: false },
+              { time: "9:30 AM", label: "Available", free: true },
+              { time: "3:30 PM", label: "MSYS 60", free: false },
+              { time: "5:00 PM", label: "Available", free: true },
             ].map((slot) => (
               <div key={slot.time} style={{
                 display: "flex", justifyContent: "space-between",

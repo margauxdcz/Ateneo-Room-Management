@@ -176,7 +176,7 @@ export default function Closing() {
               color: "var(--foreground)",
               letterSpacing: "0.1em",
             }}>
-              ARETE
+              ARM
             </p>
             <p style={{
               fontFamily: "var(--font-syne)",
