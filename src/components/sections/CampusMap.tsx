@@ -5,133 +5,270 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const buildings = [
   {
-    id: "sec",
-    name: "SEC Building",
-    short: "SEC",
-    x: 200,
-    y: 150,
-    width: 120,
-    height: 80,
-    college: "School of Engineering",
+    id: "seca",
+    name: "SEC A Building",
+    short: "SEC A",
+    x: 310,
+    y: 300,
+    width: 70,
+    height: 50,
+    college: "School of Engineering & Science",
     rooms: [
-      { id: "SEC-301", name: "SEC 301", capacity: 40, schedule: [
-        { time: "7:30 AM", subject: "CSCI 101", status: "occupied" },
-        { time: "9:00 AM", subject: "CSCI 203", status: "occupied" },
-        { time: "10:30 AM", subject: "", status: "free" },
-        { time: "1:00 PM", subject: "CSCI 310", status: "occupied" },
-        { time: "2:30 PM", subject: "", status: "free" },
-      ]},
-      { id: "SEC-302", name: "SEC 302", capacity: 35, schedule: [
-        { time: "7:30 AM", subject: "", status: "free" },
-        { time: "9:00 AM", subject: "MATH 101", status: "occupied" },
-        { time: "10:30 AM", subject: "MATH 203", status: "occupied" },
-        { time: "1:00 PM", subject: "", status: "free" },
-        { time: "2:30 PM", subject: "PHYS 101", status: "occupied" },
-      ]},
-      { id: "SEC-305", name: "SEC 305", capacity: 50, schedule: [
-        { time: "7:30 AM", subject: "ENGG 401", status: "occupied" },
-        { time: "9:00 AM", subject: "", status: "free" },
-        { time: "10:30 AM", subject: "", status: "free" },
-        { time: "1:00 PM", subject: "ENGG 301", status: "occupied" },
-        { time: "2:30 PM", subject: "", status: "free" },
-      ]},
+      {
+        id: "SECA-301", name: "SEC A 301", capacity: 40, schedule: [
+          { time: "7:30 AM", subject: "CSCI 101", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "CSCI 203", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "CSCI 310", status: "occupied" },
+        ]
+      },
+      {
+        id: "SECA-302", name: "SEC A 302", capacity: 35, schedule: [
+          { time: "7:30 AM", subject: "MATH 101", status: "occupied" },
+          { time: "9:00 AM", subject: "MATH 203", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "PHYS 101", status: "occupied" },
+        ]
+      },
     ],
   },
   {
-    id: "ls",
-    name: "Leong Hall",
-    short: "LS",
-    x: 420,
-    y: 120,
-    width: 100,
-    height: 90,
-    college: "School of Management",
+    id: "secb",
+    name: "SEC B Building",
+    short: "SEC B",
+    x: 390,
+    y: 300,
+    width: 70,
+    height: 50,
+    college: "School of Engineering & Science",
     rooms: [
-      { id: "LS-101", name: "LS 101", capacity: 45, schedule: [
-        { time: "7:30 AM", subject: "MIS 101", status: "occupied" },
-        { time: "9:00 AM", subject: "MGT 201", status: "occupied" },
-        { time: "10:30 AM", subject: "", status: "free" },
-        { time: "1:00 PM", subject: "MIS 301", status: "occupied" },
-        { time: "2:30 PM", subject: "ACCT 101", status: "occupied" },
-      ]},
-      { id: "LS-203", name: "LS 203", capacity: 30, schedule: [
-        { time: "7:30 AM", subject: "", status: "free" },
-        { time: "9:00 AM", subject: "", status: "free" },
-        { time: "10:30 AM", subject: "FIN 301", status: "occupied" },
-        { time: "1:00 PM", subject: "MIS 401", status: "occupied" },
-        { time: "2:30 PM", subject: "", status: "free" },
-      ]},
+      {
+        id: "SECB-101", name: "SEC B 101", capacity: 45, schedule: [
+          { time: "7:30 AM", subject: "", status: "free" },
+          { time: "9:00 AM", subject: "ENGG 201", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "ENGG 301", status: "occupied" },
+          { time: "2:30 PM", subject: "", status: "free" },
+        ]
+      },
+    ],
+  },
+  {
+    id: "secc",
+    name: "SEC C Building",
+    short: "SEC C",
+    x: 470,
+    y: 300,
+    width: 70,
+    height: 50,
+    college: "School of Engineering & Science",
+    rooms: [
+      {
+        id: "SECC-201", name: "SEC C 201", capacity: 50, schedule: [
+          { time: "7:30 AM", subject: "PHYS 101", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "CHEM 101", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "BIO 101", status: "occupied" },
+        ]
+      },
+    ],
+  },
+  {
+    id: "ctc",
+    name: "PLDT-CTC Building",
+    short: "CTC",
+    x: 370,
+    y: 220,
+    width: 65,
+    height: 45,
+    college: "Communication Technology Center",
+    rooms: [
+      {
+        id: "CTC-L1", name: "CTC Lab 1", capacity: 30, schedule: [
+          { time: "7:30 AM", subject: "MIS 201", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "MIS 301", status: "occupied" },
+          { time: "1:00 PM", subject: "MIS 401", status: "occupied" },
+          { time: "2:30 PM", subject: "", status: "free" },
+        ]
+      },
+      {
+        id: "CTC-L2", name: "CTC Lab 2", capacity: 30, schedule: [
+          { time: "7:30 AM", subject: "", status: "free" },
+          { time: "9:00 AM", subject: "CS 101", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "CS 301", status: "occupied" },
+        ]
+      },
+    ],
+  },
+  {
+    id: "jgsom",
+    name: "JGSOM Building",
+    short: "SOM",
+    x: 230,
+    y: 210,
+    width: 80,
+    height: 60,
+    college: "John Gokongwei School of Management",
+    rooms: [
+      {
+        id: "SOM-101", name: "SOM 101", capacity: 55, schedule: [
+          { time: "7:30 AM", subject: "MGT 101", status: "occupied" },
+          { time: "9:00 AM", subject: "MGT 201", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "MIS 101", status: "occupied" },
+          { time: "2:30 PM", subject: "", status: "free" },
+        ]
+      },
+      {
+        id: "SOM-201", name: "SOM 201", capacity: 40, schedule: [
+          { time: "7:30 AM", subject: "", status: "free" },
+          { time: "9:00 AM", subject: "ACCT 101", status: "occupied" },
+          { time: "10:30 AM", subject: "FIN 201", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "MKT 101", status: "occupied" },
+        ]
+      },
+    ],
+  },
+  {
+    id: "gonzaga",
+    name: "Gonzaga Hall",
+    short: "GH",
+    x: 310,
+    y: 150,
+    width: 65,
+    height: 45,
+    college: "College of Arts & Sciences",
+    rooms: [
+      {
+        id: "GH-101", name: "GH 101", capacity: 45, schedule: [
+          { time: "7:30 AM", subject: "PHILO 101", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "ENGL 101", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "HIST 101", status: "occupied" },
+        ]
+      },
+    ],
+  },
+  {
+    id: "kostka",
+    name: "Kostka Hall",
+    short: "KH",
+    x: 160,
+    y: 160,
+    width: 60,
+    height: 45,
+    college: "College of Arts & Sciences",
+    rooms: [
+      {
+        id: "KH-101", name: "KH 101", capacity: 40, schedule: [
+          { time: "7:30 AM", subject: "", status: "free" },
+          { time: "9:00 AM", subject: "THEO 141", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "THEO 151", status: "occupied" },
+          { time: "2:30 PM", subject: "", status: "free" },
+        ]
+      },
+    ],
+  },
+  {
+    id: "berchmans",
+    name: "Berchmans Hall",
+    short: "BH",
+    x: 155,
+    y: 240,
+    width: 65,
+    height: 50,
+    college: "College of Arts & Sciences",
+    rooms: [
+      {
+        id: "BH-101", name: "BH 101", capacity: 50, schedule: [
+          { time: "7:30 AM", subject: "SOSC 101", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "SOSC 102", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "SOSC 201", status: "occupied" },
+        ]
+      },
     ],
   },
   {
     id: "faura",
     name: "Faura Hall",
-    short: "F",
-    x: 340,
-    y: 280,
-    width: 90,
-    height: 70,
-    college: "School of Humanities",
+    short: "FH",
+    x: 460,
+    y: 180,
+    width: 65,
+    height: 50,
+    college: "College of Arts & Sciences",
     rooms: [
-      { id: "F-201", name: "F 201", capacity: 55, schedule: [
-        { time: "7:30 AM", subject: "PHILO 101", status: "occupied" },
-        { time: "9:00 AM", subject: "", status: "free" },
-        { time: "10:30 AM", subject: "THEO 141", status: "occupied" },
-        { time: "1:00 PM", subject: "", status: "free" },
-        { time: "2:30 PM", subject: "PHILO 301", status: "occupied" },
-      ]},
-      { id: "F-205", name: "F 205", capacity: 40, schedule: [
-        { time: "7:30 AM", subject: "", status: "free" },
-        { time: "9:00 AM", subject: "ENGL 101", status: "occupied" },
-        { time: "10:30 AM", subject: "", status: "free" },
-        { time: "1:00 PM", subject: "ENGL 201", status: "occupied" },
-        { time: "2:30 PM", subject: "", status: "free" },
-      ]},
+      {
+        id: "FH-201", name: "FH 201", capacity: 55, schedule: [
+          { time: "7:30 AM", subject: "PHILO 101", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "THEO 141", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "PHILO 301", status: "occupied" },
+        ]
+      },
+      {
+        id: "FH-205", name: "FH 205", capacity: 40, schedule: [
+          { time: "7:30 AM", subject: "", status: "free" },
+          { time: "9:00 AM", subject: "ENGL 101", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "ENGL 201", status: "occupied" },
+          { time: "2:30 PM", subject: "", status: "free" },
+        ]
+      },
     ],
   },
   {
-    id: "rizal",
-    name: "Rizal Library",
-    short: "RL",
-    x: 580,
-    y: 240,
-    width: 110,
-    height: 95,
-    college: "University Library",
+    id: "pipac",
+    name: "PIPAC",
+    short: "PAC",
+    x: 560,
+    y: 250,
+    width: 70,
+    height: 55,
+    college: "Performance & Arts Center",
     rooms: [
-      { id: "RL-DSR", name: "Discussion Room A", capacity: 15, schedule: [
-        { time: "7:30 AM", subject: "", status: "free" },
-        { time: "9:00 AM", subject: "Reserved", status: "occupied" },
-        { time: "10:30 AM", subject: "", status: "free" },
-        { time: "1:00 PM", subject: "", status: "free" },
-        { time: "2:30 PM", subject: "Reserved", status: "occupied" },
-      ]},
-      { id: "RL-DSB", name: "Discussion Room B", capacity: 15, schedule: [
-        { time: "7:30 AM", subject: "Reserved", status: "occupied" },
-        { time: "9:00 AM", subject: "", status: "free" },
-        { time: "10:30 AM", subject: "Reserved", status: "occupied" },
-        { time: "1:00 PM", subject: "Reserved", status: "occupied" },
-        { time: "2:30 PM", subject: "", status: "free" },
-      ]},
+      {
+        id: "PAC-MAIN", name: "Main Hall", capacity: 200, schedule: [
+          { time: "7:30 AM", subject: "", status: "free" },
+          { time: "9:00 AM", subject: "Reserved", status: "occupied" },
+          { time: "10:30 AM", subject: "", status: "free" },
+          { time: "1:00 PM", subject: "Event", status: "occupied" },
+          { time: "2:30 PM", subject: "Event", status: "occupied" },
+        ]
+      },
     ],
   },
   {
-    id: "mvp",
-    name: "MVP Sports Center",
-    short: "MVP",
-    x: 160,
-    y: 300,
-    width: 130,
-    height: 85,
-    college: "Athletics",
+    id: "schmitt",
+    name: "Schmitt Hall",
+    short: "SH",
+    x: 560,
+    y: 160,
+    width: 65,
+    height: 45,
+    college: "College of Arts & Sciences",
     rooms: [
-      { id: "MVP-GYM", name: "Main Gymnasium", capacity: 500, schedule: [
-        { time: "7:30 AM", subject: "PHED Class", status: "occupied" },
-        { time: "9:00 AM", subject: "", status: "free" },
-        { time: "10:30 AM", subject: "PHED Class", status: "occupied" },
-        { time: "1:00 PM", subject: "Intramurals", status: "occupied" },
-        { time: "2:30 PM", subject: "Intramurals", status: "occupied" },
-      ]},
+      {
+        id: "SH-101", name: "SH 101", capacity: 45, schedule: [
+          { time: "7:30 AM", subject: "MATH 101", status: "occupied" },
+          { time: "9:00 AM", subject: "", status: "free" },
+          { time: "10:30 AM", subject: "MATH 201", status: "occupied" },
+          { time: "1:00 PM", subject: "", status: "free" },
+          { time: "2:30 PM", subject: "STAT 101", status: "occupied" },
+        ]
+      },
     ],
   },
 ];
@@ -152,21 +289,15 @@ export default function CampusMap() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        headerRef.current,
+      gsap.fromTo(headerRef.current,
         { opacity: 0, y: 40 },
-        {
-          opacity: 1, y: 0, duration: 1, ease: "power3.out",
-          scrollTrigger: { trigger: headerRef.current, start: "top 80%", once: true },
-        }
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out",
+          scrollTrigger: { trigger: headerRef.current, start: "top 80%", once: true } }
       );
-      gsap.fromTo(
-        mapRef.current,
+      gsap.fromTo(mapRef.current,
         { opacity: 0, scale: 0.97 },
-        {
-          opacity: 1, scale: 1, duration: 1.2, ease: "power3.out",
-          scrollTrigger: { trigger: mapRef.current, start: "top 80%", once: true },
-        }
+        { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out",
+          scrollTrigger: { trigger: mapRef.current, start: "top 80%", once: true } }
       );
     }, sectionRef);
     return () => ctx.revert();
@@ -176,35 +307,38 @@ export default function CampusMap() {
     setSelectedBuilding(building);
     setSelectedRoom(null);
     setBooked(null);
-    gsap.fromTo(
-      panelRef.current,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }
-    );
+    setTimeout(() => {
+      gsap.fromTo(panelRef.current,
+        { opacity: 0, x: 20 },
+        { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }
+      );
+    }, 10);
   };
 
   const handleRoomClick = (room: Room) => {
     setSelectedRoom(room);
     setBooked(null);
-    gsap.fromTo(
-      ".room-detail",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }
-    );
+    setTimeout(() => {
+      gsap.fromTo(".room-detail",
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }
+      );
+    }, 10);
   };
 
   const handleBook = (slotTime: string) => {
     setBooked(slotTime);
-    gsap.fromTo(
-      ".book-confirm",
-      { opacity: 0, scale: 0.95 },
-      { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" }
-    );
+    setTimeout(() => {
+      gsap.fromTo(".book-confirm",
+        { opacity: 0, scale: 0.95 },
+        { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }
+      );
+    }, 10);
   };
 
   const freeCount = selectedBuilding
     ? selectedBuilding.rooms.reduce(
-        (acc, r) => acc + r.schedule.filter((s) => s.status === "free").length, 0
+        (acc, r) => acc + r.schedule.filter(s => s.status === "free").length, 0
       )
     : 0;
 
@@ -214,68 +348,88 @@ export default function CampusMap() {
       style={{ background: "var(--background)", padding: "120px 2rem" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+
         {/* Header */}
         <div ref={headerRef} style={{ marginBottom: "60px", opacity: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-            <div style={{ width: "32px", height: "1px", background: "var(--accent)" }} />
+            <div style={{ width: "32px", height: "1px", background: "var(--primary)" }} />
             <span style={{
-              fontFamily: "var(--font-syne)", fontSize: "11px",
-              letterSpacing: "0.3em", color: "var(--accent)", textTransform: "uppercase",
+              fontFamily: "var(--font-jakarta)", fontSize: "11px",
+              letterSpacing: "0.3em", color: "var(--primary)", textTransform: "uppercase", fontWeight: 600,
             }}>
               Interactive Campus Map
             </span>
           </div>
           <h2 style={{
-            fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.5rem, 6vw, 5rem)",
-            fontWeight: 300, color: "var(--foreground)", lineHeight: 1.1,
+            fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+            fontWeight: 400, color: "var(--foreground)", lineHeight: 1.1,
           }}>
             Find your space.<br />
-            <em style={{ color: "var(--accent)" }}>Book it instantly.</em>
+            <em style={{ color: "var(--primary)" }}>Book it instantly.</em>
           </h2>
           <p style={{
-            fontFamily: "var(--font-syne)", fontSize: "13px", color: "rgba(240,237,230,0.4)",
-            marginTop: "1rem", letterSpacing: "0.05em",
+            fontFamily: "var(--font-jakarta)", fontSize: "15px",
+            color: "var(--muted)", marginTop: "1rem",
           }}>
-            Click a building to explore rooms and availability.
+            Click any building to explore rooms and check availability.
           </p>
         </div>
 
-        {/* Map + Panel */}
-        <div style={{ display: "grid", gridTemplateColumns: selectedBuilding ? "1fr 380px" : "1fr", gap: "2rem", transition: "all 0.4s ease" }}>
+        {/* Map + Panel layout */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: selectedBuilding ? "1fr 360px" : "1fr",
+          gap: "24px",
+          transition: "grid-template-columns 0.4s ease",
+          alignItems: "start",
+        }}>
+
           {/* SVG Map */}
           <div style={{
-            border: "1px solid rgba(201,185,154,0.15)",
-            borderRadius: "2px",
+            background: "var(--surface)",
+            borderRadius: "16px",
+            border: "1px solid var(--border)",
             overflow: "hidden",
-            position: "relative",
-            background: "rgba(201,185,154,0.02)",
+            boxShadow: "0 4px 24px rgba(0,61,165,0.07)",
           }}>
             <svg
               ref={mapRef}
-              viewBox="0 0 800 480"
-              style={{ width: "100%", height: "auto", opacity: 0 }}
+              viewBox="0 0 780 460"
+              style={{ width: "100%", height: "auto", opacity: 0, display: "block" }}
             >
-              {/* Grid lines */}
               <defs>
-                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(201,185,154,0.06)" strokeWidth="1" />
+                <pattern id="mapgrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0,61,165,0.05)" strokeWidth="1" />
                 </pattern>
               </defs>
-              <rect width="800" height="480" fill="url(#grid)" />
 
-              {/* Paths / roads */}
-              <path d="M 0 220 Q 400 200 800 220" stroke="rgba(201,185,154,0.08)" strokeWidth="20" fill="none" />
-              <path d="M 380 0 Q 370 240 380 480" stroke="rgba(201,185,154,0.08)" strokeWidth="16" fill="none" />
+              {/* Background */}
+              <rect width="780" height="460" fill="#f0f4fb" />
+              <rect width="780" height="460" fill="url(#mapgrid)" />
 
-              {/* Green areas */}
-              <ellipse cx="400" cy="230" rx="60" ry="40" fill="rgba(100,140,100,0.08)" />
-              <ellipse cx="500" cy="380" rx="45" ry="30" fill="rgba(100,140,100,0.06)" />
-              <ellipse cx="260" cy="200" rx="35" ry="25" fill="rgba(100,140,100,0.06)" />
+              {/* Green areas / grounds */}
+              <ellipse cx="390" cy="390" rx="120" ry="40" fill="rgba(100,180,100,0.1)" />
+              <ellipse cx="100" cy="350" rx="60" ry="35" fill="rgba(100,180,100,0.08)" />
+              <ellipse cx="670" cy="360" rx="70" ry="40" fill="rgba(100,180,100,0.08)" />
+              <rect x="240" y="360" width="300" height="60" rx="8" fill="rgba(100,180,100,0.07)" />
+
+              {/* Roads */}
+              {/* Main horizontal road */}
+              <rect x="0" y="270" width="780" height="22" rx="0" fill="rgba(0,61,165,0.06)" />
+              {/* Main vertical road */}
+              <rect x="270" y="0" width="20" height="460" rx="0" fill="rgba(0,61,165,0.06)" />
+              {/* Secondary road */}
+              <rect x="530" y="0" width="16" height="460" rx="0" fill="rgba(0,61,165,0.04)" />
+
+              {/* Road labels */}
+              <text x="390" y="265" textAnchor="middle" fill="rgba(0,61,165,0.3)" fontSize="8" fontFamily="var(--font-jakarta)" letterSpacing="0.1em">KATIPUNAN AVENUE</text>
 
               {/* Buildings */}
               {buildings.map((b) => {
                 const isSelected = selectedBuilding?.id === b.id;
                 const isHovered = hoveredBuilding === b.id;
+                const freeSlots = b.rooms.reduce((acc, r) => acc + r.schedule.filter(s => s.status === "free").length, 0);
+
                 return (
                   <g
                     key={b.id}
@@ -286,70 +440,69 @@ export default function CampusMap() {
                   >
                     {/* Shadow */}
                     <rect
-                      x={b.x + 4} y={b.y + 4}
+                      x={b.x + 3} y={b.y + 3}
                       width={b.width} height={b.height}
-                      fill="rgba(0,0,0,0.3)" rx="2"
+                      rx="4" fill="rgba(0,61,165,0.08)"
                     />
-                    {/* Building body */}
+                    {/* Body */}
                     <rect
                       x={b.x} y={b.y}
                       width={b.width} height={b.height}
-                      fill={isSelected ? "rgba(201,185,154,0.25)" : isHovered ? "rgba(201,185,154,0.15)" : "rgba(201,185,154,0.07)"}
-                      stroke={isSelected ? "rgba(201,185,154,0.9)" : isHovered ? "rgba(201,185,154,0.6)" : "rgba(201,185,154,0.25)"}
-                      strokeWidth={isSelected ? 1.5 : 1}
-                      rx="2"
+                      rx="4"
+                      fill={isSelected ? "#003DA5" : isHovered ? "#e8eef8" : "#ffffff"}
+                      stroke={isSelected ? "#003DA5" : isHovered ? "#003DA5" : "rgba(0,61,165,0.25)"}
+                      strokeWidth={isSelected ? 2 : 1.5}
                       style={{ transition: "all 0.2s ease" }}
                     />
-                    {/* Building label */}
+                    {/* Short name */}
                     <text
                       x={b.x + b.width / 2}
-                      y={b.y + b.height / 2 - 6}
+                      y={b.y + b.height / 2 - 5}
                       textAnchor="middle"
-                      fill={isSelected ? "rgba(201,185,154,1)" : "rgba(240,237,230,0.7)"}
-                      fontSize="11"
-                      fontFamily="var(--font-syne)"
+                      fill={isSelected ? "#ffffff" : isHovered ? "#003DA5" : "#0a1628"}
+                      fontSize="10"
+                      fontFamily="var(--font-jakarta)"
                       fontWeight="700"
-                      letterSpacing="0.15em"
+                      letterSpacing="0.05em"
                     >
                       {b.short}
                     </text>
+                    {/* Free slots indicator */}
                     <text
                       x={b.x + b.width / 2}
-                      y={b.y + b.height / 2 + 10}
+                      y={b.y + b.height / 2 + 9}
                       textAnchor="middle"
-                      fill="rgba(240,237,230,0.35)"
-                      fontSize="8"
-                      fontFamily="var(--font-syne)"
-                      letterSpacing="0.05em"
+                      fill={isSelected ? "rgba(255,255,255,0.7)" : freeSlots > 0 ? "#00a855" : "rgba(0,0,0,0.3)"}
+                      fontSize="7.5"
+                      fontFamily="var(--font-jakarta)"
+                      fontWeight="600"
                     >
-                      {b.rooms.length} rooms
+                      {freeSlots > 0 ? `${freeSlots} free` : "full"}
                     </text>
-                    {/* Selection dot */}
+
+                    {/* Selected pin dot */}
                     {isSelected && (
-                      <circle
-                        cx={b.x + b.width / 2}
-                        cy={b.y - 10}
-                        r="4"
-                        fill="var(--accent)"
-                      />
+                      <circle cx={b.x + b.width / 2} cy={b.y - 8} r="5" fill="#E8A800" />
                     )}
                   </g>
                 );
               })}
 
               {/* Compass */}
-              <g transform="translate(750, 430)">
-                <circle cx="0" cy="0" r="16" fill="rgba(10,10,10,0.8)" stroke="rgba(201,185,154,0.2)" strokeWidth="1" />
-                <text x="0" y="-6" textAnchor="middle" fill="rgba(201,185,154,0.8)" fontSize="7" fontFamily="var(--font-syne)" fontWeight="700">N</text>
-                <path d="M 0 -4 L 3 4 L 0 2 L -3 4 Z" fill="rgba(201,185,154,0.6)" />
+              <g transform="translate(734, 420)">
+                <circle cx="0" cy="0" r="18" fill="white" stroke="rgba(0,61,165,0.15)" strokeWidth="1" />
+                <text x="0" y="-5" textAnchor="middle" fill="#003DA5" fontSize="8" fontFamily="var(--font-jakarta)" fontWeight="800">N</text>
+                <polygon points="0,-4 2.5,4 0,2 -2.5,4" fill="#003DA5" />
               </g>
 
               {/* Legend */}
-              <g transform="translate(20, 440)">
-                <rect width="8" height="8" fill="rgba(201,185,154,0.25)" stroke="rgba(201,185,154,0.9)" strokeWidth="1" rx="1" />
-                <text x="14" y="7" fill="rgba(240,237,230,0.4)" fontSize="8" fontFamily="var(--font-syne)">Selected</text>
-                <rect x="80" width="8" height="8" fill="rgba(201,185,154,0.07)" stroke="rgba(201,185,154,0.25)" strokeWidth="1" rx="1" />
-                <text x="94" y="7" fill="rgba(240,237,230,0.4)" fontSize="8" fontFamily="var(--font-syne)">Available</text>
+              <g transform="translate(16, 430)">
+                <rect width="10" height="10" fill="#003DA5" rx="2" />
+                <text x="14" y="8" fill="rgba(10,22,40,0.5)" fontSize="8" fontFamily="var(--font-jakarta)">Selected</text>
+                <rect x="70" width="10" height="10" fill="white" stroke="rgba(0,61,165,0.3)" strokeWidth="1" rx="2" />
+                <text x="84" y="8" fill="rgba(10,22,40,0.5)" fontSize="8" fontFamily="var(--font-jakarta)">Available</text>
+                <circle cx="145" cy="5" r="4" fill="#00a855" />
+                <text x="153" y="8" fill="rgba(10,22,40,0.5)" fontSize="8" fontFamily="var(--font-jakarta)">Free slots</text>
               </g>
             </svg>
           </div>
@@ -359,254 +512,261 @@ export default function CampusMap() {
             <div
               ref={panelRef}
               style={{
-                border: "1px solid rgba(201,185,154,0.15)",
-                padding: "32px 28px",
-                overflowY: "auto",
-                maxHeight: "520px",
-                background: "rgba(201,185,154,0.02)",
+                background: "var(--surface)",
+                borderRadius: "16px",
+                border: "1px solid var(--border)",
+                boxShadow: "0 4px 24px rgba(0,61,165,0.07)",
+                overflow: "hidden",
+                opacity: 0,
               }}
             >
               {!selectedRoom ? (
                 <>
-                  {/* Building info */}
-                  <div style={{ marginBottom: "28px" }}>
+                  {/* Building header */}
+                  <div style={{
+                    padding: "24px 24px 20px",
+                    background: "var(--primary)",
+                  }}>
                     <span style={{
-                      fontFamily: "var(--font-syne)", fontSize: "10px",
-                      letterSpacing: "0.25em", color: "var(--accent)",
-                      textTransform: "uppercase",
+                      fontFamily: "var(--font-jakarta)", fontSize: "10px",
+                      letterSpacing: "0.2em", color: "rgba(255,255,255,0.6)",
+                      textTransform: "uppercase", fontWeight: 600,
                     }}>
                       {selectedBuilding.college}
                     </span>
                     <h3 style={{
-                      fontFamily: "var(--font-cormorant)", fontSize: "2rem",
-                      fontWeight: 400, color: "var(--foreground)", marginTop: "6px",
+                      fontFamily: "var(--font-serif)", fontSize: "1.6rem",
+                      color: "#ffffff", marginTop: "6px",
                     }}>
                       {selectedBuilding.name}
                     </h3>
-                    <p style={{
-                      fontFamily: "var(--font-syne)", fontSize: "11px",
-                      color: "rgba(240,237,230,0.4)", marginTop: "6px",
+                    <div style={{
+                      marginTop: "10px", display: "inline-flex",
+                      alignItems: "center", gap: "6px",
+                      background: "rgba(255,255,255,0.15)",
+                      borderRadius: "100px", padding: "4px 12px",
                     }}>
-                      {freeCount} free slots available today
-                    </p>
+                      <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: freeCount > 0 ? "#4ade80" : "rgba(255,255,255,0.4)" }} />
+                      <span style={{
+                        fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                        color: "rgba(255,255,255,0.9)", fontWeight: 600,
+                      }}>
+                        {freeCount} free slots today
+                      </span>
+                    </div>
                   </div>
 
-                  <div style={{ height: "1px", background: "rgba(201,185,154,0.1)", marginBottom: "24px" }} />
-
                   {/* Room list */}
-                  <p style={{
-                    fontFamily: "var(--font-syne)", fontSize: "10px",
-                    letterSpacing: "0.2em", color: "rgba(240,237,230,0.3)",
-                    textTransform: "uppercase", marginBottom: "16px",
-                  }}>
-                    Select a Room
-                  </p>
-                  {selectedBuilding.rooms.map((room) => {
-                    const freeSlots = room.schedule.filter(s => s.status === "free").length;
-                    return (
-                      <div
-                        key={room.id}
-                        onClick={() => handleRoomClick(room)}
-                        style={{
-                          padding: "16px",
-                          border: "1px solid rgba(201,185,154,0.1)",
-                          marginBottom: "8px",
-                          cursor: "pointer",
-                          transition: "all 0.2s ease",
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                        }}
-                        onMouseEnter={e => {
-                          (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(201,185,154,0.4)";
-                          (e.currentTarget as HTMLDivElement).style.background = "rgba(201,185,154,0.04)";
-                        }}
-                        onMouseLeave={e => {
-                          (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(201,185,154,0.1)";
-                          (e.currentTarget as HTMLDivElement).style.background = "transparent";
-                        }}
-                      >
-                        <div>
-                          <p style={{
-                            fontFamily: "var(--font-syne)", fontSize: "13px",
-                            color: "var(--foreground)", fontWeight: 500,
-                          }}>
-                            {room.name}
-                          </p>
-                          <p style={{
-                            fontFamily: "var(--font-syne)", fontSize: "11px",
-                            color: "rgba(240,237,230,0.35)", marginTop: "3px",
-                          }}>
-                            Capacity: {room.capacity}
-                          </p>
+                  <div style={{ padding: "20px 24px" }}>
+                    <p style={{
+                      fontFamily: "var(--font-jakarta)", fontSize: "10px",
+                      letterSpacing: "0.2em", color: "var(--muted)",
+                      textTransform: "uppercase", fontWeight: 600,
+                      marginBottom: "12px",
+                    }}>
+                      Rooms
+                    </p>
+                    {selectedBuilding.rooms.map((room) => {
+                      const freeSlots = room.schedule.filter(s => s.status === "free").length;
+                      return (
+                        <div
+                          key={room.id}
+                          onClick={() => handleRoomClick(room)}
+                          style={{
+                            padding: "14px 16px",
+                            borderRadius: "10px",
+                            border: "1px solid var(--border)",
+                            marginBottom: "8px",
+                            cursor: "pointer",
+                            transition: "all 0.2s ease",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                          }}
+                          onMouseEnter={e => {
+                            (e.currentTarget as HTMLDivElement).style.borderColor = "var(--primary)";
+                            (e.currentTarget as HTMLDivElement).style.background = "var(--primary-faint)";
+                          }}
+                          onMouseLeave={e => {
+                            (e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)";
+                            (e.currentTarget as HTMLDivElement).style.background = "transparent";
+                          }}
+                        >
+                          <div>
+                            <p style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "14px",
+                              color: "var(--foreground)", fontWeight: 600,
+                            }}>
+                              {room.name}
+                            </p>
+                            <p style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                              color: "var(--muted)", marginTop: "2px",
+                            }}>
+                              Capacity: {room.capacity}
+                            </p>
+                          </div>
+                          <div style={{ textAlign: "right" }}>
+                            <span style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                              color: freeSlots > 0 ? "#00a855" : "var(--muted)",
+                              fontWeight: 600,
+                            }}>
+                              {freeSlots} free
+                            </span>
+                            <p style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "11px",
+                              color: "var(--primary)", marginTop: "2px", fontWeight: 600,
+                            }}>
+                              View →
+                            </p>
+                          </div>
                         </div>
-                        <div style={{ textAlign: "right" }}>
-                          <span style={{
-                            fontFamily: "var(--font-syne)", fontSize: "11px",
-                            color: freeSlots > 0 ? "#7db87d" : "rgba(240,237,230,0.3)",
-                          }}>
-                            {freeSlots} free
-                          </span>
-                          <p style={{
-                            fontFamily: "var(--font-syne)", fontSize: "10px",
-                            color: "rgba(201,185,154,0.5)", marginTop: "3px",
-                          }}>
-                            View →
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </>
               ) : (
                 <div className="room-detail" style={{ opacity: 0 }}>
-                  {/* Back button */}
-                  <button
-                    onClick={() => { setSelectedRoom(null); setBooked(null); }}
-                    style={{
-                      fontFamily: "var(--font-syne)", fontSize: "10px",
-                      letterSpacing: "0.2em", color: "var(--accent)",
-                      textTransform: "uppercase", background: "transparent",
-                      border: "none", cursor: "pointer", marginBottom: "20px",
-                      padding: 0,
-                    }}
-                  >
-                    ← Back to {selectedBuilding.name}
-                  </button>
-
-                  <h3 style={{
-                    fontFamily: "var(--font-cormorant)", fontSize: "1.8rem",
-                    fontWeight: 400, color: "var(--foreground)", marginBottom: "4px",
+                  {/* Room header */}
+                  <div style={{
+                    padding: "24px 24px 20px",
+                    background: "var(--primary-faint)",
+                    borderBottom: "1px solid var(--border)",
                   }}>
-                    {selectedRoom.name}
-                  </h3>
-                  <p style={{
-                    fontFamily: "var(--font-syne)", fontSize: "11px",
-                    color: "rgba(240,237,230,0.35)", marginBottom: "24px",
-                  }}>
-                    Capacity: {selectedRoom.capacity} people
-                  </p>
-
-                  <div style={{ height: "1px", background: "rgba(201,185,154,0.1)", marginBottom: "20px" }} />
-
-                  <p style={{
-                    fontFamily: "var(--font-syne)", fontSize: "10px",
-                    letterSpacing: "0.2em", color: "rgba(240,237,230,0.3)",
-                    textTransform: "uppercase", marginBottom: "14px",
-                  }}>
-                    Today's Schedule
-                  </p>
-
-                  {/* Schedule */}
-                  {selectedRoom.schedule.map((slot) => {
-                    const isFree = slot.status === "free";
-                    const isBooked = booked === slot.time;
-                    return (
-                      <div
-                        key={slot.time}
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                          padding: "12px 14px",
-                          marginBottom: "6px",
-                          border: `1px solid ${isBooked ? "rgba(201,185,154,0.6)" : isFree ? "rgba(125,184,125,0.2)" : "rgba(240,237,230,0.06)"}`,
-                          background: isBooked ? "rgba(201,185,154,0.08)" : "transparent",
-                          borderRadius: "1px",
-                          transition: "all 0.3s ease",
-                        }}
-                      >
-                        <div>
-                          <span style={{
-                            fontFamily: "var(--font-syne)", fontSize: "11px",
-                            color: "rgba(240,237,230,0.5)",
-                          }}>
-                            {slot.time}
-                          </span>
-                          <p style={{
-                            fontFamily: "var(--font-syne)", fontSize: "12px",
-                            color: isFree ? "#7db87d" : "rgba(240,237,230,0.6)",
-                            marginTop: "2px",
-                          }}>
-                            {isFree ? "Available" : slot.subject}
-                          </p>
-                        </div>
-                        {isFree && !isBooked && (
-                          <button
-                            onClick={() => handleBook(slot.time)}
-                            style={{
-                              fontFamily: "var(--font-syne)", fontSize: "10px",
-                              letterSpacing: "0.15em", textTransform: "uppercase",
-                              padding: "6px 14px", background: "transparent",
-                              border: "1px solid rgba(125,184,125,0.4)",
-                              color: "#7db87d", cursor: "pointer",
-                              transition: "all 0.2s ease",
-                            }}
-                            onMouseEnter={e => {
-                              (e.target as HTMLButtonElement).style.background = "rgba(125,184,125,0.1)";
-                            }}
-                            onMouseLeave={e => {
-                              (e.target as HTMLButtonElement).style.background = "transparent";
-                            }}
-                          >
-                            Reserve
-                          </button>
-                        )}
-                        {isBooked && (
-                          <span style={{
-                            fontFamily: "var(--font-syne)", fontSize: "10px",
-                            letterSpacing: "0.15em", textTransform: "uppercase",
-                            color: "var(--accent)",
-                          }}>
-                            ✓ Reserved
-                          </span>
-                        )}
-                      </div>
-                    );
-                  })}
-
-                  {/* Booking confirmation */}
-                  {booked && (
-                    <div
-                      className="book-confirm"
+                    <button
+                      onClick={() => { setSelectedRoom(null); setBooked(null); }}
                       style={{
-                        marginTop: "20px",
-                        padding: "16px",
-                        border: "1px solid rgba(201,185,154,0.3)",
-                        background: "rgba(201,185,154,0.05)",
-                        opacity: 0,
+                        fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                        color: "var(--primary)", background: "transparent",
+                        border: "none", cursor: "pointer", padding: 0,
+                        fontWeight: 600, marginBottom: "12px",
                       }}
                     >
-                      <p style={{
-                        fontFamily: "var(--font-cormorant)", fontSize: "1.1rem",
-                        fontStyle: "italic", color: "var(--accent)", marginBottom: "4px",
-                      }}>
-                        Reservation confirmed.
-                      </p>
-                      <p style={{
-                        fontFamily: "var(--font-syne)", fontSize: "11px",
-                        color: "rgba(240,237,230,0.4)",
-                      }}>
-                        {selectedRoom.name} · {booked} · {selectedBuilding.name}
-                      </p>
-                    </div>
-                  )}
+                      ← {selectedBuilding.name}
+                    </button>
+                    <h3 style={{
+                      fontFamily: "var(--font-serif)", fontSize: "1.5rem",
+                      color: "var(--foreground)",
+                    }}>
+                      {selectedRoom.name}
+                    </h3>
+                    <p style={{
+                      fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                      color: "var(--muted)", marginTop: "4px",
+                    }}>
+                      Capacity: {selectedRoom.capacity} people
+                    </p>
+                  </div>
+
+                  {/* Schedule */}
+                  <div style={{ padding: "20px 24px" }}>
+                    <p style={{
+                      fontFamily: "var(--font-jakarta)", fontSize: "10px",
+                      letterSpacing: "0.2em", color: "var(--muted)",
+                      textTransform: "uppercase", fontWeight: 600,
+                      marginBottom: "12px",
+                    }}>
+                      Today's Schedule
+                    </p>
+
+                    {selectedRoom.schedule.map((slot) => {
+                      const isFree = slot.status === "free";
+                      const isBooked = booked === slot.time;
+                      return (
+                        <div
+                          key={slot.time}
+                          style={{
+                            display: "flex", justifyContent: "space-between",
+                            alignItems: "center",
+                            padding: "10px 14px", borderRadius: "8px",
+                            marginBottom: "6px",
+                            background: isBooked ? "rgba(0,61,165,0.06)" : isFree ? "rgba(0,168,85,0.05)" : "transparent",
+                            border: `1px solid ${isBooked ? "rgba(0,61,165,0.2)" : isFree ? "rgba(0,168,85,0.2)" : "var(--border)"}`,
+                            transition: "all 0.2s ease",
+                          }}
+                        >
+                          <div>
+                            <p style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "11px",
+                              color: "var(--muted)",
+                            }}>{slot.time}</p>
+                            <p style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "13px",
+                              color: isFree ? "#00a855" : "var(--foreground)",
+                              fontWeight: isFree ? 600 : 400,
+                            }}>
+                              {isFree ? "Available" : slot.subject}
+                            </p>
+                          </div>
+                          {isFree && !isBooked && (
+                            <button
+                              onClick={() => handleBook(slot.time)}
+                              style={{
+                                fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                                fontWeight: 700, padding: "6px 16px", borderRadius: "6px",
+                                background: "var(--primary)", color: "white",
+                                border: "none", cursor: "pointer",
+                                transition: "all 0.2s ease",
+                              }}
+                              onMouseEnter={e => (e.currentTarget.style.background = "var(--primary-light)")}
+                              onMouseLeave={e => (e.currentTarget.style.background = "var(--primary)")}
+                            >
+                              Reserve
+                            </button>
+                          )}
+                          {isBooked && (
+                            <span style={{
+                              fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                              color: "var(--primary)", fontWeight: 700,
+                            }}>✓ Reserved</span>
+                          )}
+                        </div>
+                      );
+                    })}
+
+                    {/* Confirmation */}
+                    {booked && (
+                      <div
+                        className="book-confirm"
+                        style={{
+                          marginTop: "16px", padding: "16px",
+                          borderRadius: "10px", opacity: 0,
+                          background: "var(--primary-faint)",
+                          border: "1px solid rgba(0,61,165,0.15)",
+                        }}
+                      >
+                        <p style={{
+                          fontFamily: "var(--font-serif)", fontSize: "1.1rem",
+                          fontStyle: "italic", color: "var(--primary)",
+                        }}>
+                          Reservation confirmed!
+                        </p>
+                        <p style={{
+                          fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                          color: "var(--muted)", marginTop: "4px",
+                        }}>
+                          {selectedRoom.name} · {booked} · {selectedBuilding.name}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
-              {/* Close panel */}
-              <button
-                onClick={() => { setSelectedBuilding(null); setSelectedRoom(null); setBooked(null); }}
-                style={{
-                  marginTop: "24px",
-                  fontFamily: "var(--font-syne)", fontSize: "10px",
-                  letterSpacing: "0.2em", color: "rgba(240,237,230,0.25)",
-                  textTransform: "uppercase", background: "transparent",
-                  border: "none", cursor: "pointer", padding: 0,
-                }}
-              >
-                Close ×
-              </button>
+              {/* Close */}
+              <div style={{ padding: "0 24px 20px" }}>
+                <button
+                  onClick={() => { setSelectedBuilding(null); setSelectedRoom(null); setBooked(null); }}
+                  style={{
+                    fontFamily: "var(--font-jakarta)", fontSize: "12px",
+                    color: "var(--muted)", background: "transparent",
+                    border: "none", cursor: "pointer", padding: 0, fontWeight: 500,
+                  }}
+                >
+                  Close ×
+                </button>
+              </div>
             </div>
           )}
         </div>

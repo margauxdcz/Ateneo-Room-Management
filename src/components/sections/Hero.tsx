@@ -115,7 +115,7 @@ export default function Hero() {
             }}>
               Find a room.<br />
               Book it in seconds.<br />
-              <span style={{ color: "var(--primary)" }}>Actually enjoy</span>{" "}
+              <span style={{ color: "var(--primary)" }}>Make the most of</span>{" "}
               <em>campus life.</em>
             </h1>
           </div>
@@ -131,7 +131,7 @@ export default function Hero() {
             maxWidth: "480px",
             fontWeight: 400,
           }}>
-            ARM is the smart campus platform for Ateneo de Manila. See every building, every room, every free slot — and reserve your space before someone else does.
+            ARM (Ateneo Room Management) brings the entire campus into one platform—real-time room availability, seamless booking, and total control over your schedule.
           </p>
 
           {/* CTA */}
