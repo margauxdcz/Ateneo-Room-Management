@@ -81,7 +81,7 @@ export default function Features() {
                 textTransform: "uppercase",
               }}
             >
-              What ARETE does
+              What ARM does
             </span>
           </div>
           <h2
