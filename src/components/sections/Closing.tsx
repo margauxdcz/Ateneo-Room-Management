@@ -142,7 +142,7 @@ export default function Closing() {
               (e.target as HTMLButtonElement).style.color = "var(--background)";
             }}
           >
-            Get Early Access
+            contact
           </button>
 
           <span style={{
@@ -176,7 +176,6 @@ export default function Closing() {
               color: "var(--foreground)",
               letterSpacing: "0.1em",
             }}>
-              ARM
             </p>
             <p style={{
               fontFamily: "var(--font-syne)",
@@ -218,7 +217,7 @@ export default function Closing() {
             color: "rgba(240,237,230,0.15)",
             textTransform: "uppercase",
           }}>
-            © 2026 ARETE · Ateneo de Manila University
+            © 2026 ARM · Ateneo de Manila University
           </p>
         </div>
       </div>
